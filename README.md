@@ -8,7 +8,8 @@ The idea is to develop a system that will control the movement of the antenna in
 
 
 # Napkin Diagram
-![Block Diagram](https://user-images.githubusercontent.com/62237873/172036180-da4c20fb-7124-4962-9982-1840ec3b8489.png)
+![Block Diagram](https://user-images.githubusercontent.com/62237873/172036256-357c8623-6599-4c1d-be56-0c23972c625e.png)
+
 
 # Contributors
 * Bhavesh Asanabada - Software Development
