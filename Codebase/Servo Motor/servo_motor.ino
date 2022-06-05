@@ -1,15 +1,18 @@
 /*****************************************************
- * Date: 13 july 2018
- * Written by: Usman Ali Butt
- * Property off: www.microcontroller-project.com
- * ***************************************************/
- 
+ * SERVO MOTOR CONFIG CODE
+ * Author: Bhavesh Asanabada
+ * Micro-controller: NodeMCU
+* ***************************************************/
+
+// <-------- Initialize required libraries (Begin) --------> 
 #include <ESP8266WiFi.h>
 #include <Servo.h>
+// <-------- Initialize required libraries (END) -------->
+
 Servo servo;
  
-const char* ssid = "project12";
-const char* password = "project123456";  
+const char* ssid = "Your WiFi ID";
+const char* password = "Enter WiFi password";  
 
 WiFiServer server(80);
  
@@ -62,49 +65,49 @@ void loop() {
   Serial.println(request);
   client.flush();
 
- int value = 0;
- // Match the request
+  int value = 0;
+  // Match the request
 
-if (request.indexOf("/Req=0") != -1)  {
-  servo.write(0); //Moving servo to 0 degree
-  value=0;
-}
-if (request.indexOf("/Req=20") != -1)  {
-  servo.write(20); //Moving servo to 0 degree
-  value=20;
-}
-if (request.indexOf("/Req=40") != -1)  {
-  servo.write(40); //Moving servo to 0 degree
-  value=40;
-}
-if (request.indexOf("/Req=60") != -1)  {
-  servo.write(60); //Moving servo to 0 degree
-  value=60;
-}
-if (request.indexOf("/Req=80") != -1)  {
-  servo.write(80); //Moving servo to 0 degree
-  value=80;
-}
-if (request.indexOf("/Req=90") != -1)  {
-  servo.write(90); //Moving servo to 0 degree
-  value=90;
-}
-if (request.indexOf("/Req=120") != -1)  {
-  servo.write(120); //Moving servo to 0 degree
-  value=120;
-}
-if (request.indexOf("/Req=140") != -1)  {  
-  servo.write(140); //Moving servo to 90 degree
-  value=140;
-}
-if (request.indexOf("/Req=160") != -1)  { 
-  servo.write(160); //Moving servo to 180 degree
-  value=160;
-}
-if (request.indexOf("/Req=180") != -1)  {
-  servo.write(180); //Moving servo to 0 degree
-  value=180;
-}
+  if (request.indexOf("/Req=0") != -1)  {
+    servo.write(0); //Moving servo to 0 degree
+    value=0;
+  }
+  if (request.indexOf("/Req=20") != -1)  {
+    servo.write(20); //Moving servo to 0 degree
+    value=20;
+  }
+  if (request.indexOf("/Req=40") != -1)  {
+    servo.write(40); //Moving servo to 0 degree
+    value=40;
+  }
+  if (request.indexOf("/Req=60") != -1)  {
+    servo.write(60); //Moving servo to 0 degree
+    value=60;
+  }
+  if (request.indexOf("/Req=80") != -1)  {
+    servo.write(80); //Moving servo to 0 degree
+    value=80;
+  }
+  if (request.indexOf("/Req=90") != -1)  {
+    servo.write(90); //Moving servo to 0 degree
+    value=90;
+  }
+  if (request.indexOf("/Req=120") != -1)  {
+    servo.write(120); //Moving servo to 0 degree
+    value=120;
+  }
+  if (request.indexOf("/Req=140") != -1)  {  
+    servo.write(140); //Moving servo to 90 degree
+    value=140;
+  }
+  if (request.indexOf("/Req=160") != -1)  { 
+    servo.write(160); //Moving servo to 180 degree
+    value=160;
+  }
+  if (request.indexOf("/Req=180") != -1)  {
+    servo.write(180); //Moving servo to 0 degree
+    value=180;
+  }
 
   // Return the response
   client.println("HTTP/1.1 200 OK");
