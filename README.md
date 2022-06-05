@@ -20,9 +20,32 @@ The idea is to develop an Internet of Things(IoT) based automated control system
 
 # Deployment <a name="deployment"></a>
 1. Download and install <a href="https://www.arduino.cc/en/software">Arduino IDE</a>
-2. Connect to NodeMCU and deploy the controller code.
-3. Conenct to Arduino UNO-1 and deploy the RF reveiver code.
-4. Connect to Arduino UNO-2 and deploy the RF transmitter code.
+2. Setup a workspace and clone the repository.
+    ```bash
+    $ git clone https://github.com/bhavesh-asana/Antenna-Positioning-System.git
+    ```
+3. Connect to NodeMCU and deploy the controller code.
+    ```bash
+    $ cd Codebase/Servo\ Motor
+    $ open servo_motor.ino
+    ```
+    **Note:** Configure the WiFi SSID and Password before deploying the code into NodeMCU microcontroller.
+4. Conenct to Arduino UNO-1 and deploy the RF reveiver code.
+    ```bash
+    $ cd Codebase/Receiver
+    $ open receiver.ino
+    ```
+5. Connect to Arduino UNO-2 and deploy the RF transmitter code.
+    ```bash
+    $ cd Codebase/Transmitter
+    $ open transmitter.ino
+    ```
+## Web Interface
+1. On deploying the code into NodeMCU, open the serial monitor and set the baud rate to 15000.
+2. Connect your desktop/laptop to the WiFi configured in the code. If ESP8266 is connected to the WiFi, it shows the successful connectionwith an IP address.
+3. Copy the IP address and paste in a new window.
+4. It shows a webpage with controlles.
+## Mobile Interface
 
 # Project Wiki <a name="wiki"></a>
 
